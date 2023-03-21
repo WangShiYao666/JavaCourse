@@ -1,28 +1,25 @@
 package cn.ssdut.pet;
-//测试类
+
+import java.util.Scanner;
+
+/**
+ * 测试类，领养宠物并喂食。
+ */
 public class Test {
 	public static void main(String[] args) {
-		// 1、创建宠物对象pet并输出信息
-		Pet pet = new Pet("贝贝");
-		pet.print();
-		/*// 2、创建狗狗对象dog并输出信息
-		Dog dog = new Dog();
-		dog.setName("多多");
-		dog.setHealth(90);
-		dog.setLove(80);
-		dog.setStrain("吉娃娃");
-		dog.print();
-		// 3、创建企鹅对象pgn并输出信息
-		Penguin pgn = new Penguin();
-		pgn.setName("大黑");
-		pgn.setHealth(98);
-		pgn.setLove(99);
-		pgn.setSex("Q妹");
-		pgn.print();*/
-		
-		Dog dog=new Dog("多多","吉娃娃");
-		dog.print();
-		Penguin pgn = new Penguin("大黑","Q妹");
-		dog.print();
-	}
+		 Master master=new Master("王先生",100);
+		 Scanner input = new Scanner(System.in);
+		 System.out.println("欢迎您来到宠物店！");
+		 System.out.print("请选择要领养的宠物类型：（1、狗狗 2、企鹅）");
+		 int typeId=input.nextInt();
+		 Pet pet=master.getPet(typeId);
+		 if(pet!=null){
+			 System.out.println("领养成功！");
+			 //pet.setHealth(80);  //设置健康值，以便正常喂食
+			 master.feed(pet);
+			 master.play(pet);
+		 }else{
+			 System.out.println("对不起，没有此类型的宠物，领养失败");
+		 }
+   }
 }
