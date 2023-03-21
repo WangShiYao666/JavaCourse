@@ -24,6 +24,11 @@ public final class Bus extends MotoVehicle {
         }
     }
 
+    /**
+     * 计算租金
+     * @param days 租用天数
+     * @return
+     */
     public int CalcRent(int days) {
         int rent = 0;
         if(seatCount > 16) {
