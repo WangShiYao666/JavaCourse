@@ -44,10 +44,10 @@ public class Master {
 	 */
 	public Pet getPet(int typeId){
 		Pet pet=null;
-		if(typeId==1){
-			pet= new Dog("Å·Å·", "Ñ©ÄÈÈğ");
-		}else if(typeId==2){
-			pet  = new Penguin("éªéª", "QÃÃ");
+		if(typeId == 1){
+			pet = new Dog("Å·Å·", "Ñ©ÄÈÈğ");
+		}else if(typeId == 2){
+			pet = new Penguin("éªéª", "QÃÃ");
 		}
 		return pet;
 	}
