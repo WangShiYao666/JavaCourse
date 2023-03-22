@@ -43,7 +43,7 @@ public class Master {
 	 * @return
 	 */
 	public Pet getPet(int typeId){
-		Pet pet=null;
+		Pet pet = null;
 		if(typeId == 1){
 			pet = new Dog("Å·Å·", "Ñ©ÄÈÈğ");
 		}else if(typeId == 2){
