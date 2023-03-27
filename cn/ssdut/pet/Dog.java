@@ -41,6 +41,7 @@ public class Dog extends Pet {
 	 */
 	public void catchingFlyDisc() {
 		System.out.println("¹·¹·" + this.getName() + "ÕıÔÚ½Ó·ÉÅÌ¡£");
+//		this.health = this.health - 10;
 		this.setHealth(this.getHealth()-10);
 		this.setLove(this.getLove()+5);
 	}
