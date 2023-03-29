@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ListTest {
     public static void main(String[] args) {
-        List dogs = new LinkedList();
+        LinkedList dogs = new LinkedList();
         Dog ouou = new Dog("欧欧","雪娜瑞");
         Dog yaya = new Dog("亚亚", "拉布拉多");
         Dog feifei = new Dog("菲菲", "拉布拉多");
@@ -20,6 +20,9 @@ public class ListTest {
 
 //        dogs.remove(0); //删除第一条狗狗
 //        dogs.remove(feifei); //删除菲菲
+        Dog tuantuan = new Dog("团团","柴犬");
+        dogs.addFirst(tuantuan);
+        dogs.removeFirst();
 
         System.out.println("共计 "+ dogs.size() + " 条狗狗。");
         System.out.println("分别是:");
