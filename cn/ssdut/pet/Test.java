@@ -3,23 +3,23 @@ package cn.ssdut.pet;
 import java.util.Scanner;
 
 /**
- * ²âÊÔÀà£¬ÁìÑø³èÎï²¢Î¹Ê³¡£
+ * æµ‹è¯•ç±»ï¼Œé¢†å…»å® ç‰©å¹¶å–‚é£Ÿã€‚
  */
 public class Test {
 	public static void main(String[] args) {
-		 Master master=new Master("ÍõÏÈÉú",100);
+		 Master master=new Master("ç‹å…ˆç”Ÿ",100);
 		 Scanner input = new Scanner(System.in);
-		 System.out.println("»¶Ó­ÄúÀ´µ½³èÎïµê£¡");
-		 System.out.print("ÇëÑ¡ÔñÒªÁìÑøµÄ³èÎïÀàĞÍ£º£¨1¡¢¹·¹· 2¡¢Æó¶ì£©");
+		 System.out.println("æ¬¢è¿æ‚¨æ¥åˆ°å® ç‰©åº—ï¼");
+		 System.out.print("è¯·é€‰æ‹©è¦é¢†å…»çš„å® ç‰©ç±»å‹ï¼šï¼ˆ1ã€ç‹—ç‹— 2ã€ä¼é¹…ï¼‰");
 		 int typeId=input.nextInt();
 		 Pet pet=master.getPet(typeId);
 		 if(pet!=null){
-			 System.out.println("ÁìÑø³É¹¦£¡");
-			 //pet.setHealth(80);  //ÉèÖÃ½¡¿µÖµ£¬ÒÔ±ãÕı³£Î¹Ê³
+			 System.out.println("é¢†å…»æˆåŠŸï¼");
+			 //pet.setHealth(80);  //è®¾ç½®å¥åº·å€¼ï¼Œä»¥ä¾¿æ­£å¸¸å–‚é£Ÿ
 			 master.feed(pet);
 			 master.play(pet);
 		 }else{
-			 System.out.println("¶Ô²»Æğ£¬Ã»ÓĞ´ËÀàĞÍµÄ³èÎï£¬ÁìÑøÊ§°Ü");
+			 System.out.println("å¯¹ä¸èµ·ï¼Œæ²¡æœ‰æ­¤ç±»å‹çš„å® ç‰©ï¼Œé¢†å…»å¤±è´¥");
 		 }
    }
 }
