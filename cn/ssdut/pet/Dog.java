@@ -1,48 +1,58 @@
 package cn.ssdut.pet;
 
 /**
- * ¹·¹·Àà£¬³èÎïµÄ×ÓÀà¡£
+ * ç‹—ç‹—ç±»ï¼Œå® ç‰©çš„å­ç±»ã€‚
  */
 public class Dog extends Pet {
-	private String strain;// Æ·ÖÖ
+	private String strain;// å“ç§
+
 	/**
-	 * ÓĞ²Î¹¹Ôì·½·¨¡£
-	 * @param name   êÇ³Æ
-	 * @param strain   Æ·ÖÖ
+	 * æœ‰å‚æ„é€ æ–¹æ³•ã€‚
+	 *
+	 * @param name   æ˜µç§°
+	 * @param strain å“ç§
 	 */
 	public Dog(String name, String strain) {
-		super(name); 
+		super(name);
 		this.strain = strain;
 	}
+
 	public String getStrain() {
 		return strain;
 	}
+
 	/**
-	 * ÖØĞ´¸¸ÀàµÄprint·½·¨¡£
+	 * é‡å†™çˆ¶ç±»çš„printæ–¹æ³•ã€‚
 	 */
-	public void print(){
-		super.print(); //µ÷ÓÃ¸¸ÀàµÄprint·½·¨
-		System.out.println("ÎÒÊÇÒ»Ö» " + this.strain + "¡£");
+	public void print() {
+		super.print(); //è°ƒç”¨çˆ¶ç±»çš„printæ–¹æ³•
+		System.out.println("æˆ‘æ˜¯ä¸€åª " + this.strain + "ã€‚");
 	}
-	
+
 	/**
-	 * ÊµÏÖ³ÔÊ³·½·¨¡£ 
+	 * å®ç°åƒé£Ÿæ–¹æ³•ã€‚
 	 */
 	public void eat() {
-		if(getHealth()>=100){
-			System.out.println("¹·¹·"+this.getName() +"³Ô±¥ÁË£¬²»ĞèÒªÎ¹Ê³ÁË£¡");
-		}else{
-			this.setHealth(this.getHealth()+3);
-			System.out.println("¹·¹·"+this.getName() + "³Ô±¥À²£¡½¡¿µÖµÔö¼Ó3¡£");
+		if (getHealth() >= 100) {
+			System.out.println("ç‹—ç‹—" + this.getName() + "åƒé¥±äº†ï¼Œä¸éœ€è¦å–‚é£Ÿäº†ï¼");
+		} else {
+			this.setHealth(this.getHealth() + 3);
+			System.out.println("ç‹—ç‹—" + this.getName() + "åƒé¥±å•¦ï¼å¥åº·å€¼å¢åŠ 3ã€‚");
 		}
 	}
+
 	/**
-	 * ÊµÏÖ½Ó·ÉÅÌ·½·¨ 
+	 * å®ç°æ¥é£ç›˜æ–¹æ³•
 	 */
 	public void catchingFlyDisc() {
-		System.out.println("¹·¹·" + this.getName() + "ÕıÔÚ½Ó·ÉÅÌ¡£");
+		System.out.println("ç‹—ç‹—" + this.getName() + "æ­£åœ¨æ¥é£ç›˜ã€‚");
 //		this.health = this.health - 10;
-		this.setHealth(this.getHealth()-10);
-		this.setLove(this.getLove()+5);
+		this.setHealth(this.getHealth() - 10);
+		this.setLove(this.getLove() + 5);
 	}
+
+	public boolean equals(Object obj){
+		return true;
+	}
+
 }
